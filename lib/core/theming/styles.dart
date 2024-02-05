@@ -37,11 +37,11 @@ class TextStyles {
   static TextStyle font16GreyRegular = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.normal,
-    color: ColorsManager.mainBlack,
+    color: ColorsManager.mainGrey,
   );
   static TextStyle font24BlackcExtraBold = TextStyle(
     fontSize: 24.sp,
-    fontWeight: FontWeight.w800,
+    fontWeight: FontWeight.w900,
     color: ColorsManager.mainBlack,
   );
   static TextStyle font30WhiteBold = TextStyle(

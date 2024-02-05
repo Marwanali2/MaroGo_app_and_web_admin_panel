@@ -1,8 +1,10 @@
 import 'package:adv_ecommerce_app_and_web_admin_panel/core/theming/theme_data.dart';
 import 'package:adv_ecommerce_app_and_web_admin_panel/core/theming/theme_prefs.dart';
 import 'package:adv_ecommerce_app_and_web_admin_panel/core/theming/theme_provider.dart';
-import 'package:adv_ecommerce_app_and_web_admin_panel/features/home/home_screen.dart';
+import 'package:adv_ecommerce_app_and_web_admin_panel/features/home/presentation/views/home_screen.dart';
+import 'package:adv_ecommerce_app_and_web_admin_panel/features/on_boarding/presentation/views/on_boarding.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 class AdvEcommerceApp extends StatefulWidget {
@@ -37,9 +39,14 @@ class _AdvEcommerceAppState extends State<AdvEcommerceApp> {
       ],
       child: Consumer<DarkThemeProvider>(
         builder: (context, darkThemeProvider, child) {
-          return MaterialApp(
-            theme: Styles.themeData(darkThemeProvider.getDarkTheme, context),
-            home: const HomeScreen(),
+          return ScreenUtilInit(
+            designSize: const Size(360, 690),
+            minTextAdapt: true,
+            splitScreenMode: true,
+            child: MaterialApp(
+              theme: Styles.themeData(darkThemeProvider.getDarkTheme, context),
+              home: OnBoarding(),
+            ),
           );
         },
       ),
