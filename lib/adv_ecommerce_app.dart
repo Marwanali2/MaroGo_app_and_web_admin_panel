@@ -1,3 +1,4 @@
+import 'package:adv_ecommerce_app_and_web_admin_panel/core/routing/app_router.dart';
 import 'package:adv_ecommerce_app_and_web_admin_panel/core/theming/theme_data.dart';
 import 'package:adv_ecommerce_app_and_web_admin_panel/core/theming/theme_prefs.dart';
 import 'package:adv_ecommerce_app_and_web_admin_panel/core/theming/theme_provider.dart';
@@ -43,9 +44,9 @@ class _AdvEcommerceAppState extends State<AdvEcommerceApp> {
             designSize: const Size(360, 690),
             minTextAdapt: true,
             splitScreenMode: true,
-            child: MaterialApp(
+            child: MaterialApp.router(
+              routerConfig: AppRouter.router,
               theme: Styles.themeData(darkThemeProvider.getDarkTheme, context),
-              home: OnBoarding(),
             ),
           );
         },

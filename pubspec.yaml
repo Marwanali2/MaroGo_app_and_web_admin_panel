@@ -34,12 +34,12 @@ dependencies:
   flutter_iconly: ^1.0.2
   flutter_native_splash: ^2.3.7
   flutter_screenutil: ^5.9.0
+  go_router: ^13.1.0
   google_fonts: ^6.1.0
   lottie: ^2.7.0
   provider: ^6.1.1
   scale_button: ^2.1.2
   shared_preferences: ^2.2.2
-  
 
 dev_dependencies:
   flutter_lints: ^2.0.0
